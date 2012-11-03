@@ -26,6 +26,20 @@ class TurboLinksShell extends AppShell {
             $this->error($e);
         }
 
-        //
+        // output
+        $message = <<<EOF
+--------------------------------------------------------------------------------
+CakeTurboLinks is now installed!!
+Execute intall command at first time.
+
+    \$ APP_ROOT/Console/cake CakeTurboLinks.TurboLinks Install
+
+And insert follow tag into head tag in your layout file(default.ctp).
+
+    <?php echo echo \$this->Html->script('/cake_turbo_links/js/turbolinks.js'); ?>
+
+--------------------------------------------------------------------------------
+EOF;
+        $this->out($message);
     }
 }
